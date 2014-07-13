@@ -13,7 +13,7 @@ Dataset <- (cbind(OkDateFormat, Dataset[,3:9]))
 names(Dataset) <- c("Date","GlobalActivePower","GlobalReactivePower","Voltage","GlobalIntensity", "SubMetering1", "SubMetering2","SubMetering3")
 
 ##Printing plots to .png file
-png('plot2.png')
+png('plot2.png',bg = "transparent")
 
 	plot(Dataset$Date,Dataset$GlobalActivePower, type ="l", main = "", xlab = "", ylab = "Global Active Power (kilowatts)")
 

@@ -13,7 +13,7 @@ Dataset <- (cbind(OkDateFormat, Dataset[,3:9]))
 names(Dataset) <- c("Date","GlobalActivePower","GlobalReactivePower","Voltage","GlobalIntensity", "SubMetering1", "SubMetering2","SubMetering3")
 
 ##Printing plots to .png file
-png('plot4.png')
+png('plot4.png',bg = "transparent")
 
 	par(mfrow = c(2,2))
 
@@ -27,7 +27,7 @@ png('plot4.png')
 	plot(Dataset$Date,Dataset$SubMetering1, type ="l", main = "", xlab = "", ylab = "Energy sub metering")
 	lines(Dataset$Date,Dataset$SubMetering2, col = "red")
 	lines(Dataset$Date,Dataset$SubMetering3, col = "blue")
-	legend("topright", legend = c("Sub metering 1","Sub metering 2","Sub metering 3"), pch = 95, col = c("black","red","blue"))
+	legend("topright", legend = c("Sub metering 1","Sub metering 2","Sub metering 3"), pch = 95, col = c("black","red","blue"), box.col = "transparent")
 
 	##Plot 4
 	plot(Dataset$Date,Dataset$GlobalReactivePower, type ="l", main = "", xlab = "datetime", ylab = "Global Reactive Power")

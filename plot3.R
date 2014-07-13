@@ -13,12 +13,12 @@ Dataset <- (cbind(OkDateFormat, Dataset[,3:9]))
 names(Dataset) <- c("Date","GlobalActivePower","GlobalReactivePower","Voltage","GlobalIntensity", "SubMetering1", "SubMetering2","SubMetering3")
 
 ##Printing plots to .png file
-png('plot3.png')
+png('plot3.png',bg = "transparent")
 
 	plot(Dataset$Date,Dataset$SubMetering1, type ="l", main = "", xlab = "", ylab = "Energy sub metering")
 	lines(Dataset$Date,Dataset$SubMetering2, col = "red")
 	lines(Dataset$Date,Dataset$SubMetering3, col = "blue")
-	legend("topright", legend = c("Sub metering 1","Sub metering 2","Sub metering 3"), pch = 95, col = c("black","red","blue"))
+	legend("topright", legend = c("Sub metering 1","Sub metering 2","Sub metering 3"), pch = 95, col = c("black","red","blue"), box.col = "transparent")
 
 dev.off()
 

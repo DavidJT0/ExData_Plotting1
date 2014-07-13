@@ -14,7 +14,8 @@ Dataset <- (cbind(OkDateFormat, Dataset[,3:9]))
 names(Dataset) <- c("Date","GlobalActivePower","GlobalReactivePower","Voltage","GlobalIntensity", "SubMetering1", "SubMetering2","SubMetering3")
 
 ##Printing plots to .png file
-png('plot1.png')
+
+png('plot1.png',bg = "transparent")
 
 	hist(Dataset$GlobalActivePower, col = "red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)")
 
